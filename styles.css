@@ -701,6 +701,12 @@ body {
   align-items: center;
 }
 
+.about-content {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 .about-lead {
   font-size: 1.2rem;
   color: var(--color-text);
@@ -1767,8 +1773,20 @@ body {
 
 /* ========== Responsive ========== */
 @media (max-width: 1024px) {
+  .about .section-head,
+  .about .about-content,
+  .about .about-content p,
+  .about .about-lead,
+  .about .about-features {
+    max-width: 100%;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-visual {
+    min-width: 0;
   }
 
   .about-card,
@@ -1811,6 +1829,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  .about.section {
+    overflow-x: hidden;
+  }
+
+  .about .container {
+    min-width: 0;
+  }
+
   .nav-list {
     position: fixed;
     top: calc(var(--banner-h) + var(--header-h));
